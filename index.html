@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown editor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <header><label for="user_input">Markdown editor by</label> <a href="https://github.com/Simplelamer8/">Simplelamer8</a></header>
+    <main>
+        <div class="input_section">
+            <h1>Your markdown input:</h1>
+            <textarea name="user_input" id="user_input" cols="30" rows="10" placeholder="Your input..."></textarea>
+            <button class="copy_input">Copy</button>
+        </div>
+        <div class="output_section">
+            <h1>Html Output:</h1>
+            <textarea name="result" id="result" cols="30" rows="10" placeholder="Output..."></textarea>
+            <button class="copy_output">Copy</button>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
