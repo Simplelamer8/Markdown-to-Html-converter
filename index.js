@@ -3,25 +3,22 @@ var output_val = document.querySelector('#result');
 
 if (localStorage.length != 0)
 {
-    input_val.value = localStorage.getItem('text');
+    $('#user_input').value = localStorage.getItem('text');
 }
 
-input_val.addEventListener('keyup', () => {
-    localStorage.setItem('text', input_val.value);
-    document.getElementById('result').value = marked.parse(document.getElementById("user_input").value);
+$('#user_input').keyup(function(){
+    localStorage.setItem('text', $('#user_input').value);
+    document.querySelector('#result').value = marked.parse(document.querySelector("#user_input").value);
 })
 
-var input = document.querySelector('.copy_input');
-var output = document.querySelector('.copy_output');
-
-input.addEventListener('click', () => {
+$('.copy_input').click(function(){
     input_val.select();
     input_val.setSelectionRange(0, 99999);
 
     navigator.clipboard.writeText(input_val.value);
 })
 
-output.addEventListener('click', () => {
+$('.copy_output').click(function(){
     output_val.select();
     output_val.setSelectionRange(0, 99999);
 
