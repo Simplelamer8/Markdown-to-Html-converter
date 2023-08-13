@@ -3,11 +3,11 @@ var output_val = document.querySelector('#result');
 
 if (localStorage.length != 0)
 {
-    $('#user_input').value = localStorage.getItem('text');
+    input_val.value = localStorage.getItem('text');
 }
 
 $('#user_input').keyup(function(){
-    localStorage.setItem('text', $('#user_input').value);
+    localStorage.setItem('text', input_val.value);
     document.querySelector('#result').value = marked.parse(document.querySelector("#user_input").value);
 })
 
