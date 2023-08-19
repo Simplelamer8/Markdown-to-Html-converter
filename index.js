@@ -6,19 +6,20 @@ if (localStorage.length != 0)
     input_val.value = localStorage.getItem('text');
 }
 
-$('#user_input').keyup(function(){
+input_val.addEventListener('keyup', () => {
     localStorage.setItem('text', input_val.value);
     document.querySelector('#result').value = marked.parse(document.querySelector("#user_input").value);
 })
 
-$('.copy_input').click(function(){
+document.querySelector('.copy_input').addEventListener('click', () => {
     input_val.select();
     input_val.setSelectionRange(0, 99999);
 
     navigator.clipboard.writeText(input_val.value);
 })
 
-$('.copy_output').click(function(){
+
+document.querySelector('.copy_output').addEventListener('click', () => {
     output_val.select();
     output_val.setSelectionRange(0, 99999);
 
